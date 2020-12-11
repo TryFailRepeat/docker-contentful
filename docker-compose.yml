@@ -1,0 +1,10 @@
+version: "3"
+services:
+  docker-contentful:
+    build: 
+      context: .
+      dockerfile: .docker/Dockerfile
+    volumes:
+      - ./source:/home/node/app/source
+    working_dir: /home/node/app
+    command: tail -f /dev/null
