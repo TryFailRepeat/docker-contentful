@@ -1,4 +1,4 @@
-FROM node:9
+FROM node:14.15.4-alpine
 
 # By default, Docker runs container as root which inside of the container can pose as a security issue.
 # You would want to run the container as an unprivileged user wherever possible. The node images provide
@@ -13,8 +13,7 @@ ENV PATH=/home/node/.npm-global/bin:$PATH
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 
 # installing global packages
-RUN npm install contentful-cli -g
-RUN npm install contentful-export@6.0.4 -g
+RUN npm install contentful-cli@1.5.7 -g
 
 WORKDIR /home/node/app
 
