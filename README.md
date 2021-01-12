@@ -3,4 +3,4 @@
 
 [documentation](https://github.com/contentful/contentful-export)
 
-	docker-compose exec dokcker-contentful sh -c 'cd source && contentful-export --space-id {spaceId} --management-token {managementToken}'
+	docker-compose run docker-contentful sh -c 'cd source && contentful-export --space-id "[spaceId]" --management-token "[managementToken]"'
